@@ -1,0 +1,54 @@
+{
+  "name": "@hiroppy/renovate-config",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "renovate-config-validator"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiroppy/renovate-config.git"
+  },
+  "author": "hiroppy <git@hiroppy.me> (https://hiroppy.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hiroppy/renovate-config/issues"
+  },
+  "homepage": "https://github.com/hiroppy/renovate-config#readme",
+  "devDependencies": {
+    "prettier": "^2.0.5",
+    "renovate": "^20.5.1"
+  },
+  "renovate-config": {
+    "default": {
+      "extends": [
+        "config:base",
+        ":semanticCommitTypeAll(chore)",
+        "group:monorepos"
+      ],
+      "labels": [
+        "renovate"
+      ],
+      "major": {
+        "groupName": "all major dependencies"
+      },
+      "minor": {
+        "groupName": "all minor dependencies"
+      },
+      "patch": {
+        "automerge": true,
+        "groupName": "all patch dependencies"
+      },
+      "packageRules": [
+        {
+          "depTypeList": [
+            "peerDependencies"
+          ],
+          "enabled": false
+        }
+      ],
+      "rangeStrategy": "bump",
+      "separateMinorPatch": true
+    }
+  }
+}
