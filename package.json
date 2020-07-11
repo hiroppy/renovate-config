@@ -17,7 +17,7 @@
   "homepage": "https://github.com/hiroppy/renovate-config#readme",
   "devDependencies": {
     "prettier": "^2.0.5",
-    "renovate": "^21.26.1"
+    "renovate": "^21.26.2"
   },
   "renovate-config": {
     "default": {
